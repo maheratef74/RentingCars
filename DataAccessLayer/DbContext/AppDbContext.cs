@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using DataAccessLayer.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -32,9 +33,12 @@ public class AppDbContext :IdentityDbContext<ApplicationUser>
         // TPT Configuration: Customer and Admin will have their own tables
         modelBuilder.Entity<Customer>()
             .ToTable("Customers");  // Derived type has its own table
-           
-
+        
         modelBuilder.Entity<Admin>()
             .ToTable("Admins");  // Derived type has its own table
     }
+
+    public DbSet<Car?> Cars { get; set; }
+    public DbSet<RentalRecord> RentalRecords { get; set; }
+    public DbSet<Customer> Customers { get; set; }
 }

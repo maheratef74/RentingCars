@@ -1,0 +1,633 @@
+{
+  "Home": "الصفحه الرئيسه",
+  "Ayadty": "عياتي",
+  "About": "حول ",
+  "Contact": "  اتصال ",
+  "FAQ": "الأسئلة الشائعة ",
+  "Home Page 1": "الصفحة الرئيسية 1",
+  "Services": "الخدمات",
+  "Pages": "الصفحات",
+  "404 Error": "خطأ 404",
+  "Blogs": "المدونات",
+  "Blog Details": "تفاصيل المدونة",
+  "Contact Us": "اتصل بنا",
+  "Book Appointment": "احجز موعد",
+  "We Provide Medical Services That You Can Trust!": "نحن نقدم خدمات طبية يمكنك الوثوق بها!",
+  "Get Appointment": "احجز موعدًا",
+  "Learn More": "اعرف المزيد",
+  "About Us": "معلومات عنا",
+  "Lorem Amet": "لوريم أميت",
+  "Emergency Cases": "الحالات الطارئة",
+  "It is Timetable for Today Appointment": "هذا جدول الحجز لدي الدكتور اليوم لا تقلق نحن نحافظ علي سريه بيناتك الشخصيه",
+  "Doctor Timetable": "جدول الطبيب",
+  "Opening Hours": "ايام العمل",
+  "Monday - Friday": "الاثنين - الجمعة",
+  "8.00-20.00": "8.00-20.00",
+  "Saturday": "السبت",
+  "9.00-18.30": "9.00-18.30",
+  "Monday - Thursday": "الاثنين - الخميس",
+  "9.00-15.00": "9.00-15.00",
+
+  "ReadyToHelp": "نحن دائمًا جاهزون لمساعدتك وعائلتك",
+  "SectionDescription": "لوريم إيبسوم دولور سيت أميت كونسكتتور أديبيسيسينغ إليت برايسنت أليكويت. بريتيوم.",
+  "EmergencyHelp": "مساعدة طارئة",
+  "EmergencyHelpDescription": "لوريم إيبسوم سيت، كونسكتتور أديبيسيسينغ إليت. مايسيناس مي كوام فولبتات.",
+  "EnrichedPharmacy": "صيدلية غنية",
+  "EnrichedPharmacyDescription": "لوريم إيبسوم سيت، كونسكتتور أديبيسيسينغ إليت. مايسيناس مي كوام فولبتات.",
+  "MedicalTreatment": "علاج طبي",
+  "MedicalTreatmentDescription": "لوريم إيبسوم سيت، كونسكتتور أديبيسيسينغ إليت. مايسيناس مي كوام فولبتات.",
+  "HospitalRooms": "غرف المستشفى",
+  "SpecialistDoctors": "أطباء متخصصون",
+  "HappyPatients": "مرضى سعداء",
+  "YearsExperience": "سنوات الخبرة",
+  "DifferentServices": "نقدم خدمات مختلفة لتحسين صحتك",
+  "WhyChooseDescription": "لوريم إيبسوم دولور سيت أميت كونسكتتور أديبيسيسينغ إليت برايسنت أليكويت. بريتيوم.",
+  "WhoWeAre": "من نحن",
+  "WhoWeAreDescription1": "لوريم إيبسوم دولور سيت أميت، كونسكتتور أديبيسيسينغ إليت. مايسيناس فاريترا أنتيج فيل إست لوبرتيس، أ كومودو ماجنا رونكوس. إن كيس نيسي نون إيميت كوام فاريترا كومودو.",
+  "WhoWeAreDescription2": "كلاسي أبتنت تاسيتي سوشيوسكو أد ليتورا توركويينت بير كونوبيا نوسترا، بير إنسيكتوس هيمينيوس.",
+  "ListItem1": "مايسيناس فيتاي لوكتوس نيب.",
+  "ListItem2": "دويز ماسا ماسا.",
+  "ListItem3": "أليكوام فيوجات إنتيردوم.",
+  "ListItem4": "مايسيناس فيتاي لوكتوس نيب.",
+  "ListItem5": "دويز ماسا ماسا.",
+  "ListItem6": "أليكوام فيوجات إنتيردوم.",
+  "call_to_action": {
+    "header": "هل تحتاج إلى رعاية طبية طارئة؟ اتصل بـ 1234 56789",
+    "paragraph": "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسكينغ إليت. كويزكي بورتتيتور ديكتوم توربيس نيك جرافيتا.",
+    "button_1": "اتصل الآن",
+    "button_2": "اعرف المزيد"
+  },
+  "portfolio": {
+    "header": "نحن نحافظ على قواعد النظافة داخل عيادتنا",
+    "paragraph": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسكينغ إليت بريزنت أليكت. بريتيومتس",
+    "view_details": "عرض التفاصيل"
+  },
+  "services": {
+    "header": "نقدم خدمات مختلفة لتحسين صحتك",
+    "paragraph": "لوريم إيبسوم دولور سيت أميت كونسيكتيتور أديبيسكينغ إليت بريزنت أليكت. بريتيومتس",
+    "services_list": {
+      "general_treatment": "علاج عام",
+      "teeth_whitening": "تبييض الأسنان",
+      "heart_surgery": "جراحة القلب",
+      "ear_treatment": "علاج الأذن",
+      "vision_problems": "مشاكل الرؤية",
+      "blood_transfusion": "نقل الدم"
+    }
+  },
+  "pricing_table": {
+    "header": "نقدم لك أفضل علاج بأسعار معقولة",
+    "plastic_surgery": {
+      "title": "جراحة تجميلية",
+      "price": "$199<span>/ لكل زيارة</span>",
+      "features": [
+        "لوريم إيبسوم دولور سيت",
+        "كوبتيتور سولليسيتيودين فنتوم",
+        "نولام إنتيردوم إينيم",
+        "دونيك ألتريسيز ميتيتس",
+        "بيلينتس إجي نيب"
+      ]
+    },
+    "teeth_whitening": {
+      "title": "تبييض الأسنان",
+      "price": "$299<span>/ لكل زيارة</span>",
+      "features": [
+        "لوريم إيبسوم دولور سيت",
+        "كوبتيتور سولليسيتيودين فنتوم",
+        "نولام إنتيردوم إينيم",
+        "دونيك ألتريسيز ميتيتس",
+        "بيلينتس إجي نيب"
+      ]
+    },
+    "heart_surgery": {
+      "title": "جراحة القلب",
+      "price": "$399<span>/ لكل زيارة</span>",
+      "features": [
+        "لوريم إيبسوم دولور سيت",
+        "كوبتيتور سولليسيتيودين فنتوم",
+        "نولام إنتيردوم إينيم",
+        "دونيك ألتريسيز ميتيتس",
+        "بيلينتس إجي نيب"
+      ]
+    },
+    "button": "احجز الآن",
+    "Keep up with Our Most Recent Medical News.": "ابق على اطلاع بأحدث أخبارنا الطبية.",
+    "Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts": "لوريم إيبسوم دولور سيت أميت كونسكتتور أديبيسسينج إليت بريزنت أليكيه. بريتيوم تس.",
+    "We have announced our new product.": "لقد أعلنّا عن منتجنا الجديد.",
+    "Top five ways for solving teeth problems.": "أفضل خمس طرق لحل مشاكل الأسنان.",
+    "We provide highly business solutions.": "نحن نقدم حلولاً تجارية متقدمة.",
+    "Name": "الاسم",
+    "Email": "البريد الإلكتروني",
+    "Phone": "الهاتف",
+    "Doctor": "الطبيب",
+    "Dr. Akther Hossain": "الدكتور أكبر حسين",
+    "Dr. Dery Alex": "الدكتور ديري أليكس",
+    "Dr. Jovis Karon": "الدكتور جوفيس كارون",
+    "Date": "التاريخ",
+    "Write Your Message Here.....": "اكتب رسالتك هنا.....(اختياري)",
+    "Book An Appointment": "احجز موعدًا",
+    "( We will confirm by a Text Message )": "( سنؤكد عبر رسالة نصية )",
+    "Your email address": "بريدك الإلكتروني",
+    "About Us": "معلومات عنا",
+    "Lorem ipsum dolor sit am consectetur adipisicing elit do eiusmod tempor incididunt ut labore dolore magna.": "لوريم إيبسوم دولور سيت آم كونسيكتيتور أديبيسيسينغ إليت دو إيوسمد tempor incididunt ut labore dolore magna.",
+    "Quick Links": "روابط سريعة",
+    "Home": "الرئيسية",
+
+    "Services": "الخدمات",
+    "Our Cases": "حالاتنا",
+    "Other Links": "روابط أخرى",
+    "Consuling": "استشارات",
+    "Finance": "المالية",
+    "Testimonials": "الشهادات",
+    "FAQ": "الأسئلة الشائعة",
+    "Contact Us": "اتصل بنا",
+    "Open Hours": "ايام العمل",
+    "Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.": "لوريم إيبسوم دولور سيت آم كونسيكتيتور أديبيسيسينغ إليت دو إيوسمد tempor incididunt.",
+    "Monday - Friday": "الاثنين - الجمعة",
+    "8.00-20.00": "8.00-20.00",
+    "Saturday": "السبت",
+    "9.00-18.30": "9.00-18.30",
+    "Monday - Thusday": "الاثنين - الخميس",
+    "9.00-15.00": "9.00-15.00",
+    "Newsletter": "النشرة الإخبارية",
+    "subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,": "اشترك في نشرتنا الإخبارية لتلقي جميع أخبارنا في صندوق بريدك.. لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسيسينغ إليت،",
+    "Email Address": "عنوان البريد الإلكتروني",
+    "© Copyright 2018  |  All Rights Reserved by": "© حقوق الطبع والنشر 2018 | جميع الحقوق محفوظة بواسطة",
+    "wpthemesgrid.com": "wpthemesgrid.com",
+    "We Are Always Ready to Help You. Book An Appointment": "نحن دائمًا مستعدون لمساعدتك. احجز موعدًا"
+  },
+  "Emergency_Care_Title": "هل تحتاج إلى رعاية طبية طارئة؟ اتصل على 1234 56789",
+  "Emergency_Care_Description": "لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيسنج إليت. كويزك بورتتيتور ديكتوم توربيس نيك جرافيتا.",
+  "Contact_Now": "اتصل الآن",
+  "Learn_More": "اعرف المزيد",
+  "Need emergency medical care? Call 1234 56789": "هل تحتاج إلى رعاية طبية طارئة؟ اتصل على 1234 56789",
+
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.": "لوريم إيبسوم دولور الجلوس أميت، سلبيات إكتيتور أديبيسينج إيليت. لقد قيل لي أن هذا هو النظام الغذائي.",
+  "Contact Now": "اتصل الان",
+
+
+  "Hygiene_Rules_Title": "نحن نحافظ على قواعد النظافة داخل مستشفانا.",
+  "Hygiene_Rules_Description": "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ إليت. دونيك لوكتوس ديكتوم إيروس أوت إمبريدينيت.",
+  "View_Details": "عرض التفاصيل",
+
+  "Services_Introduction_Title": "نحن نقدم خدمات متنوعة لتحسين صحتك.",
+  "Services_Introduction_Description": "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ إليت. دونيك لوكتوس ديكتوم إيروس أوت إمبريدينيت.",
+  "General_Treatment": "العلاج العام",
+  "General_Treatment_Description": "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ إليت. دونيك لوكتوس ديكتوم إيروس أوت إمبريدينيت.",
+  "Teeth_Whitening": "تبييض الأسنان",
+  "Teeth_Whitening_Description": "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ إليت. دونيك لوكتوس ديكتوم إيروس أوت إمبريدينيت.",
+  "Heart_Surgery": "جراحة القلب",
+  "Heart_Surgery_Description": "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ إليت. دونيك لوكتوس ديكتوم إيروس أوت إمبريدينيت.",
+  "Ear_Treatment": "علاج الأذن",
+  "Ear_Treatment_Description": "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ إليت. دونيك لوكتوس ديكتوم إيروس أوت إمبريدينيت.",
+  "Vision_Problems": "مشاكل الرؤية",
+  "Vision_Problems_Description": "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ إليت. دونيك لوكتوس ديكتوم إيروس أوت إمبريدينيت.",
+  "Blood_Transfusion": "نقل الدم",
+  "Blood_Transfusion_Description": "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ إليت. دونيك لوكتوس ديكتوم إيروس أوت إمبريدينيت.",
+
+  "Pricing_Introduction_Title": "نحن نقدم لك أفضل علاج بأسعار معقولة",
+  "Pricing_Introduction_Description": "لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسينغ إليت. بريتيوم.",
+  "Plastic_Surgery": "جراحة تجميلية",
+  "Plastic_Surgery_Price": "$199",
+
+  "Teeth_Whitening_Price": "$299",
+
+  "Heart_Surgery_Price": "$399",
+  "Per_Visit": "كل زيارة",
+  "Service_Item_1": "لوريم إيبسوم دولور سيت أميت",
+  "Service_Item_2": "كويبيتور سوليسيتودين فينتوم",
+  "Service_Item_3": "نولام إينترميدوم إينيم",
+  "Service_Item_4": "دونيك أولتريسياس ميتوس",
+  "Service_Item_5": "بيلينتسكي إيغيت نيب",
+  "Book_Now": "احجز الآن",
+
+
+
+
+  "Log In": "تسجيل الدخول",
+  "Phone Number": "رقم الهاتف",
+  "Enter your Phone Number": "ادخل رقم هاتفك",
+  "Password": "كلمة السر",
+  "Enter your password": "ادخل كلمة السر",
+  "If you don't have an account": "اذا كنت لا تملك حساب ",
+  "Create account": "إنشاء حساب",
+  "Registration": "إنشاء حساب",
+  "Full Name": "الإسم كامل",
+  "Enter your name": "ادخل اسمك",
+  "Address": "العنوان",
+  "Enter your address": "ادخل عنوانك",
+  "Date of Birth": "تاريخ الميلاد",
+  "Confirm Password": "تأكيد كلمة السر",
+  "Confirm your password": "تأكيد كلمة السر",
+  "Gender": "النوع",
+  "Male": "ذكر",
+  "Female": "أنثى",
+  "You have an account already": "انت تملك حساب بالفعل",
+  "The two passwords do not match.": "كلمة السر غير متطابقة",
+  "Select your gender": "حدد نوعك",
+
+
+
+
+  "Working Days": "أيام العمل",
+  "Day": "اليوم",
+  "Start Time": "وقت البداية",
+  "End Time": "وقت النهاية",
+  "Add More": "إضافة المزيد",
+  "Save": "حفظ",
+  "Edit": "تعديل",
+  "Select day": "تحديد اليوم",
+  "Monday": "الإثنين",
+  "Tuesday": "الثلاثاء",
+  "Wednesday": "الأربعاء",
+  "Thursday": "الخميس",
+  "Friday": "الجمعة",
+  "saturday": "السبت",
+  "Sunday": "الأحد",
+
+
+
+
+
+
+
+
+
+  "Register": "تسجيل",
+  "Enter your number": "ادخل رقم هاتفك",
+
+
+
+  "User": "مستخدم",
+
+  "John": "جون",
+  "Doe": "دو",
+  "Full": "كامل",
+  "Stack": "متكامل",
+  "Developer": "مطور",
+  "Bay": "خليج",
+  "Area": "منطقة",
+  "San": "سان",
+  "Francisco": "فرانسيسكو",
+  "CA": "كاليفورنيا",
+  "Facebook": "فيسبوك",
+  "bootdey": "بوتدي",
+
+  "Name": "الاسم",
+  "Kenneth": "كينيث",
+  "Valdez": "فالديز",
+  "Mobile": "رقم الهاتف",
+  "(320)": "(320)",
+  "380-4539": "380-4539",
+  "Email": "البريد الإلكتروني",
+  "fip@jukmuh.al": "fip@jukmuh.al",
+  "Experience": "الخبرة",
+  "5Y": "5 سنوات",
+  "price": "السعر",
+  "100": "100",
+  "per": "في",
+  "hour": "ساعة",
+
+  "Order": "رقم الكشف",
+  "Date": "التاريخ",
+  "Time": "الوقت",
+  "Status": "الحالة",
+  "Phone": "الهاتف",
+  "Number": "الرقم",
+
+  "name": "الاسم",
+  "2013/08/12": "2013/08/12",
+  "12:18:09": "12:18:09",
+  "pending": "معلق",
+  "+201021587031": "+201021587031",
+
+  "2": "2",
+  "11:48:05": "11:48:05",
+  "Active": "نشط",
+  "+201123463412": "+201123463412",
+
+  "3": "3",
+
+  "10:18:09": "10:18:09",
+  "inactive": "غير نشط",
+  "+201235801357": "+201235801357",
+  "User Profile": "الصفحه الشخصيه",
+  "Price": "السعر",
+  "100 per hour": "100 per hour",
+  "Inactive": "غير نشط",
+  "Pending": "قيد الانتظار",
+
+
+
+  "Admin": "مشرف",
+  "Experence": "تجربة",
+  "Y": "س",
+
+  "Changes": "تغييرات",
+
+
+  "Full Stack Developer": "مطور متكامل",
+  "Bay Area, San Francisco, CA": "منطقة الخليج، سان فرانسيسكو، كاليفورنيا",
+
+  "Kenneth Valdez": "كينيث فالديس",
+
+  "(320) 380-4539": "(320) 380-4539",
+
+
+  "Days of work": "أيام العمل",
+  "sunday -monday": "الأحد - الاثنين",
+  "Location": "الموقع",
+  "cairo -egypt": "القاهرة - مصر",
+  "Doctor": "الطبيب",
+  "ahmed": "أحمد",
+
+  "Full name 1": "الاسم الكامل 1",
+  "Full name 2": "الاسم الكامل 2",
+  "Full name 3": "الاسم الكامل 3",
+
+  "John Doe": "جون دو",
+
+  "loction": "موقع",
+  "Cairo-Egypt": "القاهرة-مصر",
+
+  "Save Changes": "حفظ التغييرات",
+
+
+  "Date of birth": "تاريخ الميلاد",
+  "1-1-2000": "1-1-2000",
+
+
+
+  "of": "من",
+  "birth": "ميلاد",
+
+  "Male/Female": "ذكر/أنثى",
+
+  "ORDER": "الطلب",
+  "DATE": "التاريخ",
+  "TIME": "الوقت",
+  "STATUS": "الحالة",
+
+
+  "Add_Update_Delete ": "اضافة_تعديل_حذف",
+
+
+
+
+  "Add patient": "اضف مريض",
+
+
+  "Edit Patient": "تعديل مريض",
+
+
+  "Choose Status": "اختر الحالة",
+  "button": "حفظ التغييرات",
+
+
+
+
+
+  "Delete Patient": "حذف مريض",
+  "Are you sure you want to delete this patient?": " هل تريد بالتأكيد حفظ هذا المريض ؟",
+  "Warning": "تحذير",
+  "By deleting this patient you can't undo this action.": "بحذف هذا المريض لا يمكنك التراجع عن هذا الاجراءز",
+
+  "Cancel": "الغاء",
+  "Delete": "حذف",
+
+  "DailyAppointment": "جدول الطبيب",
+  "Clinic Profile": "صفحه العياده",
+
+  "Patient Profile": "صفحتي الشخصيه",
+  "CreatAppointment": "احجز موعد",
+  "We will be confirm by an Text Message": "سوف نقوم بارسال رساله نصيه علي رقم الموبيل المسجل به لتاكيد حجزك",
+
+
+  "Change Photo": "تغير الصوره",
+  "new password": "كلمه السر الجديده",
+  "Confirm new password": " تاكيد كلمه السر الجديده",
+
+
+  "Patient Profile": "صفحتي الشخصيه",
+  "CreatAppointment": "احجز موعد",
+  "DashBoard": "لوحه التحكم",
+  "UserPages": "صفحات المستخدم",
+  "Login Screens:": "تسجيل الدخول",
+  "DoctorPages": "صفحات الدكتور",
+  "Other Pages:": "صفحات اخري",
+  "DashBoardScreens": "صفحات لوحه التحكم",
+  "Charts": "المخططات البيانيه",
+  "CreatPrescription": "كتابه روشته",
+  "Profile": "ملفي الشخصي",
+  "Logout": "تسجيل خروج",
+  "Edit_oppning_days": "تعديل ايام العمل",
+  "AddPatient": "اضافه مريض",
+  "Home page": "الصفحه الرئيسيه",
+  "Monthly Appointment": "حجوزات الشهر",
+
+
+
+
+
+
+
+  "AYADTY": "عيادتي",
+  "Dr. Hamed Amr": "د. حامد عمرو",
+  "Eye Surgeon": "جراح عيون",
+  "Al-Azhar University": "جامعة الأزهر",
+  "Patient Name:": "اسم المريض :",
+  "Enter patient's name": "أدخل اسم المريض",
+  "Age:": "العمر :",
+  "Date:": "التاريخ :",
+  "Prescription": "الوصفة الطبية",
+  "Medicine Name:": "الدواء :",
+  "Enter medicine name": "أدخل اسم الدواء",
+  "Dosage Frequency:": "جرعة الدواء :",
+  "Enter dosage frequency": "أدخل جرعة الدواء",
+  "Notes:": "ملاحظات :",
+  "Enter any notes": "أدخل أي ملاحظات",
+  "General Notes": "ملاحظات عامة",
+  "Write general notes here...": "اكتب الملاحظات العامة هنا...",
+  "Print": "طباعة",
+  "Address: Clinics": "العنوان: العيادات",
+  "Clinic Hours: Saturday, Monday": "أوقات العيادة: السبت، الاثنين",
+  "For Appointments: 01022381205": "للحجز: 01022381205",
+  "Remove": "حذف الدواء",
+  "+ Add More": "اضافة المزيد +",
+  "Age": "ادخل العمر",
+  "Phone:": "رقم الموبايل :",
+
+  "Enter phone number": "ادخل الرقم",
+
+
+
+
+  "AppointmentStatus": "حاله الحجز",
+  "PatientStatus": "مكان المريض",
+
+  "Scheduled": "تم الحجز",
+  "Canceled": "تم الالغاء",
+  "Completed": "تم الكشف",
+
+  "InHome": "في المنزل",
+  "InMyWayToClinic": "في طريقي للعياده",
+  "InClinic": "في العياده",
+
+  "Edit Appointment": "تعديل الحجز",
+  "Create Prescription": "كتابه روشته",
+  "Delete Appointment": "حذف الحجز",
+
+  "Adress": "العنوان",
+
+  "man": "رجل",
+  "female": "انثي",
+  "age": "السن",
+
+  "NameRequired": "اسم المريض مطلوب",
+
+  "PasswardAtLeast6Digit": "يجب ان تكون كلمه السر مكونه من 6 احرف",
+  "DateOfBirthRequired": "تحديد تاريخ الميلاد مطلوب",
+  "AddressRequired": "العنوان مطلوب",
+
+  "PhoneNumberRequired": "رقم الموبيل مطلوب",
+  "PasswordIsRequired": "كلمه السر مطلوبه",
+  "PhoneNumberInvalid": "رقم الموبيل غير صحيح",
+  "Remember Me": "تذكرني",
+  "Username or Password invalid": "رقم الموبيل او كلمه السر غير صحيح",
+
+  "GenderRequired": "تحديد النوع مطلوب",
+  "Use Another Phone Number": "استخدم رقم موبيل اخر",
+  "Patient Name": "اسم المريض",
+  "Daily Appointement": "جدول الطبيب",
+  "Cancele Appointment": "الغاء الحجز",
+  "Select Date": "اختر يوم",
+  "Filter": "تحديد",
+  "DataIsRequried": "التاريخ و الوقت مطلوب",
+  "You Cann't update this appointment": "لا يمكن التعديل علي حجز تم الغاءة او تم الكشف",
+  "OrderIsRequired": "ترتيب الحجز مطلوب",
+  "This appointment is Completed So You cann't Cancele it": "هذا الحجز تم الكشف عليه لذالك لا يمكن الغاءة",
+  "This appointment is already canceled.": "هذا الحجز تم الغاءة من قبل",
+  "Appointment canceled successfully.": "تم الغاء الحجز بنجاح",
+  "Appointment deleted  successfully.": "تم حذف الحجز بنجاح",
+  "Appointment Created successfully": "تم حجز الموعد بنجاح",
+  "Appointment Updated successfully": "تم تعديل الحجز بنجاح",
+  "Acount Created successfully": "تم انشاء حساب بنجاح",
+  "Are you sure?": "هل انت متاكد ؟",
+  "Do you really want to cancel the appointment?": "هل بالفعل تريد الغاء الحجز",
+  "Yes, cancel it!": "نعم, اريد الالغاء",
+  "No, keep it": "لا, اتركها",
+  "Do you really want to delete the appointment?": "هل بالفعل تريد حذف الحجز",
+  "Yes, delete it!": "نعم, اريد الحذف",
+  "Invalid email address": "الاميل غير صحيح",
+
+  "Data Updated successfully": "تم تعديل البيانات بنجاح",
+  "Add Doctor": "اضافه دكتور",
+  "Doctor Added successfully": "تم اضافه الدكتور بنجاح",
+
+  "AgeRequired": "عمر المريض مطلوب",
+
+  "Diagnosis of the disease:": "التشخيص:",
+  "Enter Diagnosis of the disease": "ادخل تشخيص الحاله",
+
+  "Invalid URL format for Facebook profile.": "ادخل رابط صحيح للفيس بوك",
+
+  "MedicineNameIsRequired": "اسم الدواء مطلوب",
+  "DateIsRequired": "تاريخ الروشته مطلوب",
+  "Prescription Created successfully": "تم حفظ الروشته بنجاح",
+  "Save Update": "حفظ التعديلات",
+  "DateRequired": "التاريخ مطلوب",
+  "Prescription Updated successfully": "تم تعديل الروشته بنجاح",
+  "Diagnosis": "التشخيص",
+  "Prescriptions": "الروشتات السابقه",
+  "Create Appointment for Patient": "حجز كشف لمريض",
+  "Search Patient": "ابحث عن مريض",
+  "Search by name...": "ابحث عن طريق الاسم",
+  "Select Patient": "اختر مريض",
+  "-- Select a Patient --": "--اختر مريض--",
+
+  "Patient Phone": "رقم المريض",
+  "Appointment Date": "تاريخ الحجز",
+
+  "About Us": "نبدة عنا",
+  "Why You Should Trust Us? Get Know About Us!": "لماذا يجب أن تثق بنا؟ تعرّف علينا!“",
+  "At our clinic, your health and well-being are our top priority. With a team of highly skilled, compassionate professionals, we offer personalized care tailored to meet each patient's unique needs. Our commitment to using the latest medical technologies ensures you receive the best, most effective treatments available.": "نضع صحتك ورفاهيتك على رأس أولوياتنا في عيادتنا. من خلال فريق من المتخصصين ذوي المهارات العالية والعاطفيين، نقدم رعاية شخصية مصممة خصيصاً لتلبية الاحتياجات الفريدة لكل مريض. يضمن التزامنا باستخدام أحدث التقنيات الطبية حصولك على أفضل العلاجات المتاحة وأكثرها فعالية.",
+  "Quality health care": "رعاية صحية عالية الجودة",
+  "Only Qualified Doctors": "الأطباء المؤهلين فقط",
+  "Medical Research Professionals": "أخصائيو الأبحاث الطبية",
+  "Features": "الميزات",
+  "Why Choose Us?": "لماذا تختارنا؟",
+  "Because we have many advantages that you won't find in our competitors.": ": لاننا نتمتع بالعديد من المميزات التي لن تجدها لدي منافسينا و هي  ",
+  "Experience": "الخبرة",
+  "Doctors": "الأطباء",
+  "Quality": "الجودة",
+  "Services": "الخدمات",
+  "Positive ": "إيجابية",
+  "Consultation": "استشارة ",
+  "24 Hours": "ساعة 24  ",
+  "Support": "دعم",
+  "Our Experience Doctors ": "أطبائنا ذوي الخبرة",
+  "Department:Internal": " قسم باطنة",
+  "Dr.Wafaa Ali": "د. وفاء علي",
+  "Dr.Maher Atef": "د.ماهر عاطف",
+  "Dr.Shahd Gamal": "د.شهد جمال",
+  "Dr.Ahmed Gafer": "د.أحمد غفر",
+  "Department :Nose and Ear": "قسم انف و اذن",
+  "Department :Teaching": "قسم تدريس ",
+  "Department :Bones": "قسم عظام",
+
+
+  "Working Days updated successfully": "تم تعديل ايام العمل بنجاح",
+  "Number Of Completed Appointment": "عدد المواعيد المكتمله",
+  "Add Nurse": "اضافه مساعد دكتور",
+  "Nurse Added successfully": "تم اضافه مساعد للدكتور بنجاح",
+
+
+  "ShowAllPatients": "عرض جميع المرضي",
+  "ShowAllStaf": "الاطباء و المساعدين",
+
+  "Remove Day": "حذف اليوم",
+  "Do you really want to delete the patient?": "هل بالفعل تريد حذف هذا المريض",
+  "Nurse": "مساعد دكتور",
+  "Deleted successfully.": "تم الحذف بنجاح",
+  "Job": "الوظيفه",
+  "Do you really want to delete the admin": "هل بالفعل تريد حذف هذا الموظف",
+  "Control Appointment Availability": "التحكم في امكانيه الحجز",
+  "Do you want to stop users from making new appointments in your clinic?": "هل تريد ايقاف الحجز في العياده؟",
+  "If you stop new appointments, users will not be able to book until you reactivate availability.": "في حاله ايقاف الحجز لا يمكن للمرضي الحجز اونلاين",
+  "Open Appointment": "فتح الحجز",
+  "Stop New Appointments": "قفل الحجز",
+
+  "Do you really want to stop the new appointments?": "هل متاكد من قفل الحجز في العياده",
+  "Yes, stop it!": "نعم , اوقف الحجز",
+  "Do you really want to open the new appointments?": "هل متاكد من فتح الحجز في العياده",
+  "Yes, open it!": "نعم , افتح الحجز",
+  "Appointments Opened successfully": "تم فتح الحجز بنجاح",
+  "Appointments Stoped successfully": "تم قفل الحجز بنجاح",
+  "It isn't availbale to book appointment in this time , please try later": "ليس من الممكن حجز موعد في هذا الوقت، يرجى المحاولة لاحقًا",
+  "Control new appointments": "التحكم في الحجز",
+  "The clinic is currently open for appointments.": "العياده الان مفتوحه للحجز",
+  "The clinic is currently closed for new appointments.": "العياده الان مغلقه لا يمكن للمرضي الحجز",
+  "ClinicNameRequired": "اسم العياده مطلوب",
+  "MyProfile": "صفحتي الشخصيه",
+  "ClinicProfile": "صفحه العياده",
+  "Working days : ": "ايام العمل : ",
+  "For Appointment : ": "للحجز : ",
+  "Adress : ": "العنوان : ",
+  "Privacy Notice:": "معلومات الامان: ",
+  "We take the privacy of our patients seriously. Your data is securely stored and protected. Only authorized medical staff can access your personal information, and it will never be shared with unauthorized parties.": "نحن نأخذ خصوصية مرضانا على محمل الجد. يتم تخزين بياناتك وحمايتها بشكل آمن. لا يمكن إلا للموظفين و الطبيب المصرح لهم الوصول إلى معلوماتك الشخصية، ولن تتم مشاركتها أبدًا مع أطراف غير مصرح لها.",
+  "Back to home page": "العوده للصفحه الرئيسيه",
+  "Appointments": "الحجز السابق",
+  "Patient deleted successfully.": "تم حذف المريض بنجاح",
+  "You have been logged out successfully." : "تم تسجيل الخروج بنجاح",
+  "Time of the appointment": "وقت الحجز",
+  "Back to Dashboard": "العوده الي لوحه التحكم",
+  "Notifications": "الاشعارات",
+  "No new notifications": "لا يوجد اشعارات",
+  "Cancel Appointment": "الغاء الحجز",
+  "Doctor Updated successfully": "تم تعديل بينات الدكتور بنجاح",
+
+
+  "Available Amount" : "الكمية المتاحة",
+  "Price Per Month" : "السعر للشهر",
+  "Model" : "الموديل",
+  "Car Added successfully" : "تم اضافه العربية بنجاح"
+}

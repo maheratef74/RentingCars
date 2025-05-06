@@ -1,0 +1,168 @@
+
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+@inject IViewLocalizer localizer
+@using System.Globalization
+@using RentingCars.Models.Car
+@model AddCarAR
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+   
+<head>
+    <title>@localizer["Update Patient"]</title>
+    <!-- Keep only the latest Font Awesome version -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+
+<form asp-controller="Dashboard" asp-action="AddCar" method="post" enctype="multipart/form-data">
+    
+    <div class="container">
+        <div class="main-body">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <!-- Profile Image -->
+                                <img id="profilePhoto"  alt="Profile Photo" class="rounded-circle" width="150">
+
+                                <div class="mt-3">
+                                    <!-- Button to trigger file input -->
+                                    <button class="btn btn-info" type="button" onclick="document.getElementById('photoInput').click()">@localizer["Change Photo"]</button>
+                                    
+                                    <input asp-for= "Photo" type="file" id="photoInput" accept="image/*" style="display:none" onchange="previewPhoto(event)">
+
+                                    <span asp-validation-for="Photo" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <ul class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8  rtl text-center align-items-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">@localizer["Model"]</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <select asp-for="Model" class="form-control">
+                                        <option value="">-- Select Model --</option>
+                                        <option value="Toyota Camry">Toyota Camry</option>
+                                        <option value="Honda Civic">Honda Civic</option>
+                                        <option value="Ford Mustang">Ford Mustang</option>
+                                        <option value="Tesla Model S">Tesla Model S</option>
+                                        <option value="BMW 3 Series">BMW 3 Series</option>
+                                        <option value="Audi A4">Audi A4</option>
+                                        <option value="Mercedes C-Class">Mercedes C-Class</option>
+                                        <option value="Hyundai Elantra">Hyundai Elantra</option>
+                                        <option value="Nissan Altima">Nissan Altima</option>
+                                        <option value="Chevrolet Malibu">Chevrolet Malibu</option>
+                                    </select>
+                                    <span asp-validation-for="Model" class="text-danger"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">@localizer["Price Per Month"]</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input asp-for="PricePerMonth" type="number" class="form-control" 
+                                               step="0.01" min="0" placeholder="0.00">
+                                    </div>
+                                    <span asp-validation-for="PricePerMonth" class="text-danger"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">@localizer["Available Amount"]</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <div class="input-group">
+                                        <input asp-for="AvailableQuantity" type="number" class="form-control" 
+                                               step="1" min="0" placeholder="0.00">
+                                        <span class="input-group-text">units</span>
+                                    </div>
+                                    <span asp-validation-for="AvailableQuantity" class="text-danger"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-9 text-secondary">
+                                    <button type="submit" class="btn btn-primary">@localizer["Save Changes"]</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form> 
+
+
+<script>
+    $(document).ready(function () {
+        // Display success message if available
+        var successMessage = '@Html.Raw(TempData["SuccessMessage"] ?? string.Empty)';
+        if (successMessage.length > 0) {
+            Swal.fire({
+                icon: 'success',
+                title: '@localizer["Success"]',
+                text: successMessage
+            });
+        }
+
+        // Display error message if available
+        var errorMessage = '@Html.Raw(TempData["ErrorMessage"] ?? string.Empty)';
+        if (errorMessage.length > 0) {
+            Swal.fire({
+                icon: 'error',
+                title: '@localizer["Oops..."]',
+                text: errorMessage
+            });
+        }
+
+        // Photo preview functionality
+        function previewPhoto(event) {
+            const photo = document.getElementById('profilePhoto');
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    photo.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+        
+        const fileInput = document.getElementById('photoInput');
+        if (fileInput) {
+            fileInput.addEventListener('change', previewPhoto);
+        }
+    });
+</script>
+<!-- jQuery Validation and Unobtrusive Validation -->
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Custom scripts (if any) -->
+<script src="~/js/main.js"></script>
+
+<!-- For Lyout -->
+<!-- jquery Min JS -->
+<script src="~/js/jquery.min.js"></script>

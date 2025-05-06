@@ -12,9 +12,10 @@ public class CarRepository : ICarRepository
         _dbContext = dbContext;
     }
     
-    public  async Task Add(Car? car)
+    public  async Task Add(Car car)
     {
         await _dbContext.Cars.AddAsync(car);
+        await _dbContext.SaveChangesAsync();
     }
 
     public async Task Delete(Car car)

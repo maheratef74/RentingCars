@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+header {
+    position: absolute;
+    top: 15%;
+    right: 30%;
+    padding: 10px;
+}
+
+.container {
+
+    background-image: url('@Url.Content("~/img/60.jpg")') !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    position: relative; /*ááÊÃßÏ Ãä ÇáãÍÊæì ÝæÞ ÇáÎáÝíÉ */
+    z-index: 1; /*áÖãÇä Ãä ÇáäÕ íÙåÑ ÝæÞ ÇáÎáÝíÉ */
+
+
+    width: 50% !important;
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: #258cfb;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(#258cfb);
+}
+
+.content form .user-details {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+[dir="ltr"] .eye-icon {
+    right: 10px;
+    left: auto;
+}
+
+[dir="rtl"] .eye-icon {
+    left: 10px;
+    right: auto;
+}
+
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    padding-right: 15px !important; /* Space for the eye icon */
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #258cfb;
+}
+
+form .button {
+    width: 100%;
+    height: 45px;
+    margin: 15px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #258cfb;
+}
+
+form .button input:hover {
+    transform: scale(0.99);
+    background-color: rgb(37, 140, 251, 0.6);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        width: 90% !important;
+        padding: 15px 20px;
+    }
+
+    .container .title {
+        font-size: 22px;
+    }
+
+    .user-details .input-box input {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    form .button {
+        height: 40px;
+    }
+
+    form .button input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100% !important;
+        padding: 10px 15px;
+    }
+
+    .container .title {
+        font-size: 20px;
+    }
+
+    .user-details .input-box input {
+        height: 35px;
+        font-size: 13px;
+    }
+
+    form .button {
+        height: 35px;
+    }
+
+    form .button input {
+        font-size: 14px;
+    }
+
+    header {
+        right: 10%;
+    }
+}
+
+@media (max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .content form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
+@media (max-width: 459px) {
+    .container .content .category {
+        flex-direction: column;
+    }
+
+    .creat_account {
+        text-align: center;
+    }
+
+    .a {
+        color: #258cfb;
+    }
+}

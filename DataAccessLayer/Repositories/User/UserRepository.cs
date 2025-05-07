@@ -14,9 +14,10 @@ public class UserRepository : IUserRepository
         _userManager = userManager;
         _dbContext = dbContext;
     }
-    public async Task<ApplicationUser?> GetById(string userId)
+    public async Task<Customer?> GetById(string userId)
     {
-        return await _userManager.FindByIdAsync(userId);
+        return await _dbContext.Users.OfType<Customer>()
+            .FirstOrDefaultAsync(c => c.Id == userId);
     }
 
     public async Task<ApplicationUser?> GetByPhone(string phone)

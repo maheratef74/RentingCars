@@ -1,13 +1,15 @@
 ﻿@{
 	Layout = null;
 }
+@model IEnumerable<DataAccessLayer.Entities.Car>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Carbook - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="~/css/open-iconic-bootstrap.min.css">
@@ -157,68 +159,41 @@
             <h2 class="mb-2">Feeatured Vehicles</h2>
           </div>
         </div>
-    		<div class="row">
-    			<div class="col-md-12">
-    				<div class="carousel-car owl-carousel">
-    					<div class="item">
-    						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(@Url.Content("~/images/car-1.jpg"));">
-		    					</div>
-		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
-		    						<div class="d-flex mb-3">
-			    						<span class="cat">Cheverolet</span>
-			    						<p class="price ml-auto">$500 <span>/day</span></p>
-		    						</div>
-		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
-		    					</div>
-		    				</div>
-    					</div>
-    					<div class="item">
-    						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car-2.jpg);">
-		    					</div>
-		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
-		    						<div class="d-flex mb-3">
-			    						<span class="cat">Cheverolet</span>
-			    						<p class="price ml-auto">$500 <span>/day</span></p>
-		    						</div>
-		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
-		    					</div>
-		    				</div>
-    					</div>
-    					<div class="item">
-    						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car-3.jpg);">
-		    					</div>
-		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
-		    						<div class="d-flex mb-3">
-			    						<span class="cat">Cheverolet</span>
-			    						<p class="price ml-auto">$500 <span>/day</span></p>
-		    						</div>
-		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
-		    					</div>
-		    				</div>
-    					</div>
-    					<div class="item">
-    						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car-4.jpg);">
-		    					</div>
-		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
-		    						<div class="d-flex mb-3">
-			    						<span class="cat">Cheverolet</span>
-			    						<p class="price ml-auto">$500 <span>/day</span></p>
-		    						</div>
-		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
-		    					</div>
-		    				</div>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
+		    <div class="row">
+			    <div class="col-md-12">
+				    <div class="carousel-car owl-carousel">
+					    @foreach (var car in Model)
+					    {
+						    @if (car.AvailableQuantity > 0)
+						    {
+							    <div class="item">
+								    <div class="car-wrap rounded ftco-animate">
+									    <div class="img rounded d-flex align-items-end" style="background-image: url(@Url.Content("~/images/"+car.PhotoUrl));">
+									    </div>
+									    <div class="text">
+										    <h2 class="mb-0"><a href="#">@car.Model</a></h2>
+										    <div class="d-flex mb-3">
+											    <p class="price ml-auto">$@car.PricePerMonth <span>/month</span></p>
+										    </div>
+										    <p class="d-flex mb-0 d-block">
+								
+											    <form asp-controller="Renting" asp-action="Rent" method="post" class="d-inline mr-1">
+												    <input type="hidden" name="carId" value="@car.Id" />
+												    <button type="submit" class="btn btn-primary py-2 mr-1">Book now</button>
+											    </form>
+    
+											    <!-- Details Button -->
+											    <a asp-controller="Cars" asp-action="Details" asp-route-id="@car.Id" 
+											       class="btn btn-secondary py-2 ml-1">Details</a>
+										    </p>
+									    </div>
+								    </div>
+							    </div>
+						    }
+					    }
+				    </div>
+			    </div>
+		    </div>
     	</div>
     </section>
 
@@ -558,6 +533,46 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="~/js/google-map.js"></script>
   <script src="~/js/main.js"></script>
-    
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+	  
+  function showSweetAlert(type, message) {
+		  const Toast = Swal.mixin({
+			  toast: true,
+			  position: 'top-end',
+			  showConfirmButton: false,
+			  timer: 3000,
+			  timerProgressBar: true,
+			  didOpen: (toast) => {
+				  toast.addEventListener('mouseenter', Swal.stopTimer)
+				  toast.addEventListener('mouseleave', Swal.resumeTimer)
+			  }
+		  });
+
+		  Toast.fire({
+			  icon: type,
+			  title: message
+		  });
+	  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+	  @if (TempData["SuccessMessage"] != null)
+	  {
+	  <text>showSweetAlert('success', '@Html.Raw(TempData["SuccessMessage"])');</text>
+	  }
+	  @if (TempData["ErrorMessage"] != null)
+	  {
+	  <text>showSweetAlert('error', '@Html.Raw(TempData["ErrorMessage"])');</text>
+	  }
+	  @if (TempData["WarningMessage"] != null)
+	  {
+	  <text>showSweetAlert('warning', '@Html.Raw(TempData["WarningMessage"])');</text>
+	  }
+	  @if (TempData["InfoMessage"] != null)
+	  {
+	  <text>showSweetAlert('info', '@Html.Raw(TempData["InfoMessage"])');</text>
+	  }
+  });
+	  </script>
   </body>
 </html>

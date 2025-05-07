@@ -8,4 +8,5 @@ public interface ICarRepository
     Task<Car?> GetById(Guid carId);
     Task<int> Count();
     Task<IEnumerable<Car>> GetPaged(int page, int pageSize);
+    
 }

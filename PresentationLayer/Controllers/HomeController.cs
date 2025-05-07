@@ -1,12 +1,21 @@
+using DataAccessLayer.Repositories.Car;
 using Microsoft.AspNetCore.Mvc;
 
 namespace RentingCars.Controllers;
 
 public class HomeController : Controller
 {
-    [HttpGet]
-    public  IActionResult Index()
+    private readonly ICarRepository _carRepository;
+
+    public HomeController(ICarRepository carRepository)
     {
-        return View();
+        _carRepository = carRepository;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Index()
+    {
+        var cars = await _carRepository.GetPaged(1, 10);
+        return View(cars);
     }
 }

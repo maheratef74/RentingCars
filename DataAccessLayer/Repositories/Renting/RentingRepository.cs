@@ -19,9 +19,9 @@ public class RentingRepository : IRentingRepository
         _dbContext = dbContext;
     }
 
-    public async Task<bool> RentCar(string userId, Guid carId)
+    public async Task<bool> RentCar(string customerId, Guid carId)
     {
-        var user = await _userRepository.GetById(userId);
+        var user = await _userRepository.GetById(customerId);
         var car = await _carRepository.GetById(carId);
 
         if (user == null || car == null || car.AvailableQuantity < 1)
@@ -32,7 +32,7 @@ public class RentingRepository : IRentingRepository
         var rental = new RentalRecord
         {
             CarId = car.Id,
-            UserId = user.Id,
+            CustomerId = user.Id,
             RentedAt = DateTime.UtcNow
         };
 
@@ -42,11 +42,11 @@ public class RentingRepository : IRentingRepository
         return true;
     }
 
-    public async Task<IEnumerable<RentalRecord>> GetRentalsByUser(string userId)
+    public async Task<IEnumerable<RentalRecord>> GetRentalsByUser(string customerId)
     {
         return await _dbContext.RentalRecords
             .Include(r => r.Car)
-            .Where(r => r.UserId == userId)
+            .Where(r => r.CustomerId == customerId)
             .ToListAsync();
     }
 
@@ -64,5 +64,30 @@ public class RentingRepository : IRentingRepository
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
+    }
+
+    public async Task<int> RemoveExpiredRentalsAsync()
+    {
+        var expirationDate = DateTime.UtcNow.AddMonths(-1);
+        
+        var expiredRentals = await _dbContext.RentalRecords
+            .Where(r => r.RentedAt <= expirationDate)
+            .ToListAsync();
+
+        if (!expiredRentals.Any()) return 0;
+
+        foreach (var rental in expiredRentals)
+        {
+            var car = await _dbContext.Cars.FirstOrDefaultAsync(c => c.Id == rental.CarId);
+            if (car != null)
+            {
+                car.AvailableQuantity++;
+            }
+        }
+
+        _dbContext.RentalRecords.RemoveRange(expiredRentals);
+        await _dbContext.SaveChangesAsync();
+
+        return expiredRentals.Count;
     }
 }

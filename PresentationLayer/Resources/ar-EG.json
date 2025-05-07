@@ -629,5 +629,9 @@
   "Available Amount" : "الكمية المتاحة",
   "Price Per Month" : "السعر للشهر",
   "Model" : "الموديل",
-  "Car Added successfully" : "تم اضافه العربية بنجاح"
+  "Car Added successfully" : "تم اضافه العربية بنجاح",
+  "Car booked successfully" : "تم حجز العربية بنجاح",
+  "Booking failed" : "فشل في الحجز",
+  "Remaining Days": "الايام المتبقية",
+  "Rent At" : "تاريخ الحجز"
 }

@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using RentingCars.Controllers;
+using RentingCars.Jobs;
 using RentingCars.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,6 +35,8 @@ builder.Services.AddScoped<IRentingRepository, RentingRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<RoleSeeder>();
+builder.Services.AddHostedService<RentalCleanupService>();
+
 #region Add Identity services
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     {
@@ -99,6 +102,8 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 #endregion
 
 var app = builder.Build();
+
+
 #region Role Seeding
 
 // Resolve RoleSeeder from DI and seed roles

@@ -1,0 +1,194 @@
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+  var today = DateTime.Today.ToString("yyyy-MM-dd"); 
+}
+@model RentingCars.Models.HelperClass.PaginatedList<DataAccessLayer.Entities.RentalRecord>
+@inject IViewLocalizer localizer
+@using Microsoft.AspNetCore.Mvc.Localization
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@localizer["DailyAppointment"] </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/RentingRecord.css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/dashBoard.css">
+    <link rel="stylesheet" href="~/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/animate.css">
+    
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="~/css/aos.css">
+
+    <link rel="stylesheet" href="~/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="~/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="~/css/flaticon.css">
+    <link rel="stylesheet" href="~/css/icomoon.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <style>
+        .status-red {
+            color: red;
+        }
+        .status-normal {
+            color: black;
+        }
+    </style>
+</head>
+
+<Body>
+<div class="container bootstrap snippets bootdey">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-box no-header clearfix">
+                <div class="main-box-body clearfix">
+                    <div class="table-responsive">
+                        <table class="table user-list">
+                            <thead class = "text-center">
+                            <tr>
+                                <th ><span>@localizer["Name"]</span></th>
+                                <th  ><span>@localizer["Rent At"]</span></th>
+                                <th  ><span>@localizer["Remaining Days"]</span></th>
+                                <th ><span>@localizer["Model"]</span></th>
+                                <th ><span>@localizer["Phone Number"]</span></th>
+                            </tr>
+                            </thead>
+                            <tbody  class = "text-center">
+                            @foreach (var rent in Model.Items)
+                            {
+                                <tr class="appointment-row">
+                                    <td>
+                                        <a class="user-link text-center" target="__blank" href="@Url.Action("Profile", "Patient")" onclick="event.stopPropagation();">
+                                            @rent.Customer.FullName
+                                        </a>
+                                    </td>
+                                    <td >@rent.RentedAt.ToString("MM/dd/yyyy")</td> 
+                                    <td>
+                                        @{
+                                            var rentalEnd = rent.RentedAt.AddMonths(1);
+                                            var remainingDays = (rentalEnd - DateTime.UtcNow).Days;
+                                            var statusClass = remainingDays <= 5 ? "status-red" : "status-normal";
+                                        }
+                                        @if (remainingDays > 0)
+                                        {
+                                            <span class="@statusClass">
+                                                @remainingDays
+                                            </span>
+                                        }
+                                    </td>
+                                    <td >@rent.Car.Model</td> 
+                                    <td class="text-center">
+                                        <a href="@($"https://wa.me/20{rent.Customer.PhoneNumber.TrimStart('0')}")" onclick="event.stopPropagation();" target="_blank">@rent.Customer.PhoneNumber</a>
+                                    </td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col text-center">
+            <div class="block-27">
+                <ul>
+                    <!-- Previous Page -->
+                    @if (Model.HasPreviousPage)
+                    {
+                        <li><a asp-action="RentingRecord" asp-route-pageNumber="@(Model.PageNumber - 1)">&lt;</a></li>
+                    }
+                    else
+                    {
+                        <li class="disabled"><span>&lt;</span></li>
+                    }
+
+                    <!-- Page Numbers -->
+                    @{
+                        var startPage = Math.Max(1, Model.PageNumber - 2);
+                        var endPage = Math.Min(Model.TotalPages, Model.PageNumber + 2);
+                    
+                        // Show first page if not in initial range
+                        if (startPage > 1)
+                        {
+                            <li><a asp-action="RentingRecord" asp-route-pageNumber="1">1</a></li>
+                            if (startPage > 2)
+                            {
+                                <li><span>...</span></li>
+                            }
+                        }
+
+                        for (var i = startPage; i <= endPage; i++)
+                        {
+                            <li class="@(i == Model.PageNumber ? "active" : "")">
+                                @if (i == Model.PageNumber)
+                                {
+                                    <span>@i</span>
+                                }
+                                else
+                                {
+                                    <a asp-action="RentingRecord" asp-route-pageNumber="@i">@i</a>
+                                }
+                            </li>
+                        }
+
+                        // Show last page if not in final range
+                        if (endPage < Model.TotalPages)
+                        {
+                            if (endPage < Model.TotalPages - 1)
+                            {
+                                <li><span>...</span></li>
+                            }
+                            <li><a asp-action="RentingRecord" asp-route-pageNumber="@Model.TotalPages">@Model.TotalPages</a></li>
+                        }
+                    }
+
+                    <!-- Next Page -->
+                    @if (Model.HasNextPage)
+                    {
+                        <li><a asp-action="RentingRecord" asp-route-pageNumber="@(Model.PageNumber + 1)">&gt;</a></li>
+                    }
+                    else
+                    {
+                        <li class="disabled"><span>&gt;</span></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/jquery.min.js"></script>
+<script src="~/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="~/js/popper.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/jquery.easing.1.3.js"></script>
+<script src="~/js/jquery.waypoints.min.js"></script>
+<script src="~/js/jquery.stellar.min.js"></script>
+<script src="~/js/owl.carousel.min.js"></script>
+<script src="~/js/jquery.magnific-popup.min.js"></script>
+<script src="~/js/aos.js"></script>
+<script src="~/js/jquery.animateNumber.min.js"></script>
+<script src="~/js/bootstrap-datepicker.js"></script>
+<script src="~/js/jquery.timepicker.min.js"></script>
+<script src="~/js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="~/js/google-map.js"></script>
+<script src="~/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</Body>
+
+</html>

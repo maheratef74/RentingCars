@@ -4,7 +4,7 @@ public interface ICarRepository
 {
     Task Add(Car car);
     Task Delete(Guid carId);
-    Task Reduce(Car car);
+    Task Reduce(Guid carId);
     Task<Car?> GetById(Guid carId);
     Task<int> Count();
     Task<IEnumerable<Car>> GetPaged(int page, int pageSize);

@@ -637,5 +637,7 @@
   "Renting Recored" : "سجل الحجز",
   "Add Car" : "اضافة عربية",
   "Car deleted successfully": "تم حذف العربية بنجاح",
-  "Cannot delete the car because it is currently rented by a customer": "لا يمكن حذف العربية لانها محجوزه بالفعل من العملاء"
+  "Cannot delete the car because it is currently rented by a customer": "لا يمكن حذف العربية لانها محجوزه بالفعل من العملاء",
+  "Add Photo" : "اضافة صورة",
+  "All Cars" : "كل العربيات"
 }

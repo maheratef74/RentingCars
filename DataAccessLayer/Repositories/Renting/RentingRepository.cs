@@ -27,16 +27,15 @@ public class RentingRepository : IRentingRepository
         if (user == null || car == null || car.AvailableQuantity < 1)
             return false;
         
-        car.AvailableQuantity--;
-        
         var rental = new RentalRecord
         {
             CarId = car.Id,
             CustomerId = user.Id,
             RentedAt = DateTime.UtcNow
         };
-
         await _dbContext.RentalRecords.AddAsync(rental);
+        await _carRepository.Reduce(carId);
+        
         await _dbContext.SaveChangesAsync();
 
         return true;

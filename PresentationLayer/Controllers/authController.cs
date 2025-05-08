@@ -24,7 +24,7 @@ public class authController : Controller
     [HttpGet]
     public  IActionResult Register()
     {
-        return View();
+         return View();
     }
     
     [HttpPost]

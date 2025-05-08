@@ -18,7 +18,7 @@ public class RentingController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Rent(Guid carId)
+    public async Task<IActionResult> Rent (Guid carId)
     {
         var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 

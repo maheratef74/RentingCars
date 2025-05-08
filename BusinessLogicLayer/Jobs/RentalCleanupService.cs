@@ -1,6 +1,9 @@
 using DataAccessLayer.Repositories.Renting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace RentingCars.Jobs;
+namespace BusinessLogicLayer.Jobs;
 
 public class RentalCleanupService : BackgroundService
 {
@@ -24,7 +27,7 @@ public class RentalCleanupService : BackgroundService
                 _logger.LogInformation($"{removed} expired rentals cleaned up at {DateTime.UtcNow}.");
             }
 
-            await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
+            await Task.Delay(TimeSpan.FromDays(1), stoppingToken);
         }
     }
 }

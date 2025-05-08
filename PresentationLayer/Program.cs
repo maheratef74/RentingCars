@@ -1,5 +1,6 @@
 using System.Globalization;
 using System.Text.Json;
+using BusinessLogicLayer.Jobs;
 using BusinessLogicLayer.Services.File;
 using DataAccessLayer.DbContext;
 using DataAccessLayer.Entities;
@@ -12,7 +13,6 @@ using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using RentingCars.Controllers;
-using RentingCars.Jobs;
 using RentingCars.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -110,10 +110,11 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var roleSeeder = scope.ServiceProvider.GetRequiredService<RoleSeeder>();
-    await roleSeeder.SeedRolesAsync();
+    await roleSeeder.SeedRolesAndAdminAsync();
 }
 
 #endregion
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

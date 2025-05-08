@@ -500,5 +500,10 @@
   "Booking failed" : "Booking failed",
   "Car booked successfully": "Car booked successfully",
   "Remaining Days": "Remaining Days",
-  "Rent At" : "Rent At"
+  "Rent At" : "Rent At",
+  "Renting Recored": "Renting Recored",
+  "Add Car" :  "Add Car",
+  "Car deleted successfully": "Car deleted successfully",
+  "Cannot delete the car because it is currently rented by a customer":  "Cannot delete the car because it is currently rented by a customer",
+  "All Cars" : "All Cars"
 }

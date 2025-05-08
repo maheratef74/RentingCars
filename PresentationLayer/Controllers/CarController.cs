@@ -1,10 +1,12 @@
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Car;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RentingCars.Models.HelperClass;
 
 namespace RentingCars.Controllers;
 
+[Authorize]
 public class CarController : Controller
 {
     private readonly ICarRepository _carRepository;

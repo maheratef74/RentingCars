@@ -18,9 +18,9 @@ public class CarRepository : ICarRepository
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task Delete(Car car)
+    public async Task Delete(Guid carId)
     {
-        var existingCar = await _dbContext.Cars.FindAsync(car.Id);
+        var existingCar = await _dbContext.Cars.FirstOrDefaultAsync(c => c.Id == carId);
         if (existingCar is not null)
         { 
             _dbContext.Cars.Remove(existingCar);

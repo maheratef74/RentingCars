@@ -9,4 +9,5 @@ public interface IRentingRepository
     Task<int> CountRentals();
     Task<IEnumerable<RentalRecord>> GetPagedRentals(int page, int pageSize);
     Task<int> RemoveExpiredRentalsAsync();
+    Task<bool> IsRent(Guid carId);
 }

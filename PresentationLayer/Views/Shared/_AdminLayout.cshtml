@@ -54,107 +54,24 @@
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
         
-        <!-- Heading -->
-        <div class="sidebar-heading" id = "dis1">
-            @localizer["UserPages"]
-        </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item" lang="ar">
-            <a class="nav-link collapsed" id="dis" href="#" data-toggle="collapse" data-target="#collapsePages"
-               aria-expanded="true" aria-controls="collapsePages">
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="DashBoard" asp-action="AddCar" id = "dis4">
                 <i class="fas fa-fw fa-folder"></i>
-                <span> @localizer["UserPages"]</span>
-            </a>
-            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar"  dir = "rtl" >
-                <div class="bg-white py-2 collapse-inner rounded">
-                 @*    <h6 class="collapse-header">@localizer["Login Screens:"]</h6>
-                    <a class="collapse-item" asp-controller="auth" asp-action="Login">@localizer["Log In"]</a>
-                    <a class="collapse-item" asp-controller="auth" asp-action="Register">@localizer["Registration"]</a>
-                    <div class="collapse-divider"></div> *@
-                  @*   <h6 class="collapse-header">@localizer["Other Pages:"]</h6> *@
-                    <a class="collapse-item" asp-controller="Home" asp-action="Index">@localizer["Home"]</a>
-                    <a class="collapse-item" asp-controller="Appointment" asp-action="DailyAppointment">@localizer["DailyAppointment"]</a>
-                    <a class="collapse-item" asp-controller="Doctor" asp-action="AboutMe">@localizer["About"]</a>
-                </div>
-            </div>
-        </li>
-        
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading" id = "dis2">
-            @localizer["DoctorPages"]
-        </div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item" >
-            <a class="nav-link collapsed" id = "dis3" href="#" data-toggle="collapse" data-target="#collapseTwo"
-               aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-fw fa-cog"></i>
-                <span> @localizer["DoctorPages"]</span>
-            </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">@localizer["DashBoardScreens:"]</h6>
-                    <a class="collapse-item" asp-controller="Doctor" asp-action="Profile">@localizer["MyProfile"]</a>
-                    <a class="collapse-item" asp-controller="Clinic" asp-action="Profile">@localizer["ClinicProfile"]</a>
-                    <a class="collapse-item" asp-controller="auth" asp-action="Register">@localizer["AddPatient"]</a>
-                    <a class="collapse-item" asp-controller="Doctor" asp-action="Create">@localizer["Add Doctor"]</a>
-                    <a class="collapse-item" asp-controller="Doctor" asp-action="AddNurse">@localizer["Add Nurse"]</a>
-                    <a class="collapse-item" asp-controller="Doctor" asp-action="UpdateWorkingDays">@localizer["Edit_oppning_days"]</a>
-                    <a class="collapse-item" asp-controller="DashBoard" asp-action="Index">@localizer["Charts"]</a>
-                    <div class="collapse-divider"></div>
-                    <h6 class="collapse-header">@localizer["Other Pages:"]</h6>
-                    <a class="collapse-item" asp-controller="Home" asp-action="Index">@localizer["Home page"]</a>
-                </div>
-            </div>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" asp-controller="DashBoard" asp-action="DailyAppointment" id = "dis4">
-                <i class="fas fa-fw fa-table"></i>
-                <span>@localizer["DailyAppointment"]</span></a>
+                <span>@localizer[ "Add Car" ]</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" asp-controller="DashBoard" asp-action="CreateAppointment" id = "dis4">
+            <a class="nav-link" asp-controller="DashBoard" asp-action="RentingRecord" id = "dis4">
                 <i class="fas fa-fw fa-folder"></i>
-                <span>@localizer["Create Appointment for Patient"]</span></a>
+                <span>@localizer["Renting Recored"]</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" asp-controller="Clinic" asp-action="ControllAppointment" id = "dis4">
-                <i class="fas fa-fw fa-cog"></i>
-                <span>@localizer["Control new appointments"]</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" asp-controller="DashBoard" asp-action="ShowAllPatients" id = "dis4">
+            <a class="nav-link" asp-controller="DashBoard" asp-action="AllCars" id = "dis4">
                 <i class="fas fa-fw fa-folder"></i>
-                <span>@localizer["ShowAllPatients"]</span></a>
+                <span>@localizer["All Cars"]</span></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" asp-controller="DashBoard" asp-action="ShowAllStaf" id = "dis4">
-                <i class="fas fa-fw fa-folder"></i>
-                <span>@localizer["ShowAllStaf"]</span></a>
-        </li>
-      
-        <!-- Nav Item - Charts -->
-        @*<li class="nav-item">
-            <a class="nav-link" asp-controller="DashBoard" asp-action="Index" id = "dis4">
-                <i class="fas fa-fw fa-chart-area"></i>
-                <span>@localizer["Charts"]</span></a>
-        </li>*@
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
- 
-
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
-    </ul>
-    <!-- End of Sidebar -->
-
+        </ul>
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 

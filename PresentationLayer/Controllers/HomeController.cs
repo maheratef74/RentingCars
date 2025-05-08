@@ -1,8 +1,10 @@
 using DataAccessLayer.Repositories.Car;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace RentingCars.Controllers;
 
+[Authorize]
 public class HomeController : Controller
 {
     private readonly ICarRepository _carRepository;

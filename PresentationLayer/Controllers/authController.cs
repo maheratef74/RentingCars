@@ -74,7 +74,7 @@ public class authController : Controller
                     {
                         return RedirectToAction("Index", "Home");
                     }
-                    return RedirectToAction("DailyAppointment", "DashBoard");
+                    return RedirectToAction("AddCar", "DashBoard");
                 }
             }
             ModelState.AddModelError("Password", _localizer["Username or Password invalid"]);

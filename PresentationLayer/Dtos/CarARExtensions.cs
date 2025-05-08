@@ -10,6 +10,14 @@ public class CarDto
     public decimal PricePerMonth { get; set; } 
     public string PhotoUrl { get; set; }
 }
+
+public class RentDto
+{ 
+    public Guid Id { get; set; }
+    public string Model { get; set; }
+    public decimal PricePerMonth { get; set; } 
+    public string PhotoUrl { get; set; }
+}
 public static class CarARExtensions
 {
     public static Car ToCar(this AddCarAR addCarAr)
@@ -29,6 +37,16 @@ public static class CarARExtensions
            Id = car.Id,
            Model = car.Model,
            PricePerMonth = car.PricePerMonth
+        };
+    }
+    public static RentDto ToRentDto(this RentalRecord rent)
+    {
+        return new RentDto()
+        {
+            PhotoUrl = rent.Car.PhotoUrl,
+            Id = rent.Id,
+            Model = rent.Car.Model,
+            PricePerMonth = rent.Car.PricePerMonth
         };
     }
 }

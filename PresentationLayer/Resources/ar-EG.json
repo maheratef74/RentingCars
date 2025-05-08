@@ -633,5 +633,9 @@
   "Car booked successfully" : "تم حجز العربية بنجاح",
   "Booking failed" : "فشل في الحجز",
   "Remaining Days": "الايام المتبقية",
-  "Rent At" : "تاريخ الحجز"
+  "Rent At" : "تاريخ الحجز",
+  "Renting Recored" : "سجل الحجز",
+  "Add Car" : "اضافة عربية",
+  "Car deleted successfully": "تم حذف العربية بنجاح",
+  "Cannot delete the car because it is currently rented by a customer": "لا يمكن حذف العربية لانها محجوزه بالفعل من العملاء"
 }

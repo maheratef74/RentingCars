@@ -1,10 +1,12 @@
 using System.Security.Claims;
 using DataAccessLayer.Repositories.Renting;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
 namespace RentingCars.Controllers;
 
+[Authorize]
 public class RentingController : Controller
 {
     private readonly IStringLocalizer<RentingController> _localizer;

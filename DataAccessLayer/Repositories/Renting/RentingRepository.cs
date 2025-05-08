@@ -90,4 +90,9 @@ public class RentingRepository : IRentingRepository
 
         return expiredRentals.Count;
     }
+    
+    public async Task<bool> IsRent(Guid carId)
+    {
+        return await _dbContext.RentalRecords.AnyAsync(r => r.CarId == carId);
+    }
 }

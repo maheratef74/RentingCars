@@ -2,6 +2,7 @@ using BusinessLogicLayer.Services.File;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories.Car;
 using DataAccessLayer.Repositories.Renting;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using RentingCars.Dtos;
@@ -10,6 +11,7 @@ using RentingCars.Models.HelperClass;
 
 namespace RentingCars.Controllers;
 
+[Authorize(Roles = Roles.Admin)]
 public class DashboardController : Controller
 {
     private readonly IFileService _fileService;
@@ -56,5 +58,34 @@ public class DashboardController : Controller
         var pagedCars = new PaginatedList<RentalRecord>(cars, totalCount, pageNumber, pageSize);
     
         return View(pagedCars);
+    }
+    
+    [HttpGet]
+    public async Task<IActionResult> AllCars(int pageNumber = 1, int pageSize = 12)
+    {
+        var totalCount = await _carRepository.Count();
+        
+        var cars = await _carRepository.GetPaged(pageNumber, pageSize);
+    
+        var pagedCars = new PaginatedList<Car>(cars, totalCount, pageNumber, pageSize);
+    
+        return View(pagedCars);
+    }
+    
+    [HttpPost]
+
+    public async Task<IActionResult> DeleteCar(Guid carId)
+    {
+        var isRent = await _rentingRepository.IsRent(carId);
+        if (isRent)
+        {
+            TempData["ErrorMessage"] = _localizer["Cannot delete the car because it is currently rented by a customer"].Value;
+        }
+        else
+        {
+            await _carRepository.Delete(carId);
+            TempData["successMessage"] = _localizer["Car deleted successfully"].Value;
+        }
+        return RedirectToAction("AllCars" , "Dashboard");
     }
 }

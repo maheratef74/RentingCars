@@ -17,7 +17,7 @@ This is a web application that allows customers to rent and book cars. Admins ca
 
 ## 🛠️ Technologies Used
 - Frontend: HTML, CSS, JavaScript 
-- Backend:  .NET 
+- Backend:  .NET MVC 
 - Database:  SQl
 - Authentication: Session-Based Auth
 - Deployment: Monster.ASP (CI/CD).
